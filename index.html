@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HiL Dashboard | Project Overview</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>HiL Test Automation Dashboard</h1>
+    <span>Senior Project &mdash; Computer Science</span>
+  </header>
+
+  <nav>
+    <a href="index.html" class="active">Overview</a>
+    <a href="screenshots.html">Project in Action</a>
+    <a href="test-results.html">Test Results</a>
+  </nav>
+
+  <div class="container">
+
+    <div class="section-label">Project Overview</div>
+    <h2>Idea &amp; Solution Description</h2>
+    <div class="divider"></div>
+
+    <div class="card">
+      <h3>The Problem</h3>
+      <p>
+        Running hardware-in-the-loop (HiL) test suites is often a manual, fragmented process. Engineers
+        execute tests from the command line, dig through raw log files for results, and have no centralized
+        view of what passed, failed, or needs attention. This slows down iteration and makes it harder to
+        communicate test health to the broader team.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>The Solution</h3>
+      <p>
+        The HiL Automation Dashboard is a desktop application built in Python that brings test configuration,
+        execution, live logging, and results reporting into one unified GUI. Rather than replacing Pytest,
+        it wraps it — giving the user a clean interface to select test suites, run them, and watch results
+        populate in real time without ever touching a terminal.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Core Features</h3>
+      <ul>
+        <li>Test suite selection panel with checkbox-based configuration</li>
+        <li>One-click test execution powered by Pytest under the hood</li>
+        <li>Live execution log with real-time output streaming</li>
+        <li>KPI summary cards showing pass, fail, and skip counts</li>
+        <li>Results export to PDF and CSV for documentation and reporting</li>
+        <li>Modular architecture separating GUI logic from test execution layer</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Tech Stack</h3>
+      <div>
+        <span class="tag">Python</span>
+        <span class="tag">Tkinter</span>
+        <span class="tag">Pytest</span>
+        <span class="tag">subprocess</span>
+        <span class="tag">CSV Export</span>
+        <span class="tag">PDF Report</span>
+        <span class="tag">GitHub</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Design Approach</h3>
+      <p>
+        The application follows a separation of concerns pattern where the GUI layer (Tkinter) never
+        directly runs tests. Instead, it delegates execution to a backend module that invokes Pytest
+        via subprocess and pipes output back to the log panel. This keeps the codebase modular,
+        testable, and extensible for future hardware communication layers.
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    HiL Test Automation Dashboard &mdash; Senior Project Delivery
+  </footer>
+
+</body>
+</html>
