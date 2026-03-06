@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HiL Dashboard | Test Results</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>HiL Test Automation Dashboard</h1>
+    <span>Senior Project &mdash; Computer Science</span>
+  </header>
+
+  <nav>
+    <a href="index.html">Overview</a>
+    <a href="screenshots.html">Project in Action</a>
+    <a href="test-results.html" class="active">Test Results</a>
+  </nav>
+
+  <div class="container">
+
+    <div class="section-label">Validation &amp; Testing</div>
+    <h2>Test Results</h2>
+    <div class="divider"></div>
+
+    <p>
+      The dashboard was validated through a series of functional tests covering core user workflows,
+      GUI behavior, and Pytest integration. Results below reflect the final test run prior to project delivery.
+    </p>
+
+    <div class="summary-bar">
+      <div class="stat-box total">
+        <div class="number">12</div>
+        <div class="label">Total Tests</div>
+      </div>
+      <div class="stat-box passed">
+        <div class="number">10</div>
+        <div class="label">Passed</div>
+      </div>
+      <div class="stat-box failed">
+        <div class="number">1</div>
+        <div class="label">Failed</div>
+      </div>
+      <div class="stat-box skipped">
+        <div class="number">1</div>
+        <div class="label">Skipped</div>
+      </div>
+    </div>
+
+    <div class="photo-placeholder">
+      <span>&#128247;</span>
+      <!-- INSERT SCREENSHOT: Pytest terminal output showing full test run summary, or the exported results CSV/PDF -->
+      Screenshot placeholder &mdash; Pytest Output / Exported Report
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Test Case</th>
+          <th>Module</th>
+          <th>Status</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Dashboard launches without errors</td>
+          <td>GUI</td>
+          <td class="pass">PASS</td>
+          <td>Main window renders correctly on launch</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Test suite checkboxes selectable</td>
+          <td>GUI</td>
+          <td class="pass">PASS</td>
+          <td>All checkboxes toggle state correctly</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Run button triggers Pytest execution</td>
+          <td>Execution</td>
+          <td class="pass">PASS</td>
+          <td>subprocess call confirmed via log output</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Live log streams output in real time</td>
+          <td>Execution</td>
+          <td class="pass">PASS</td>
+          <td>Output appears line-by-line during run</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>KPI cards update after run completes</td>
+          <td>Results</td>
+          <td class="pass">PASS</td>
+          <td>Pass/fail/skip counts reflect actual run</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Export to CSV produces valid file</td>
+          <td>Reporting</td>
+          <td class="pass">PASS</td>
+          <td>File opens correctly in Excel/Sheets</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Export to PDF produces valid file</td>
+          <td>Reporting</td>
+          <td class="pass">PASS</td>
+          <td>PDF renders test summary correctly</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>No tests selected edge case handled</td>
+          <td>GUI</td>
+          <td class="pass">PASS</td>
+          <td>Warning message displayed to user</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Log panel clears between runs</td>
+          <td>GUI</td>
+          <td class="pass">PASS</td>
+          <td>Previous output does not persist</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>App remains responsive during test run</td>
+          <td>Execution</td>
+          <td class="pass">PASS</td>
+          <td>GUI does not freeze while Pytest runs</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Invalid test path error handling</td>
+          <td>Execution</td>
+          <td class="fail">FAIL</td>
+          <td>Error message not shown to user; logged to console only</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Hardware communication layer integration</td>
+          <td>HiL</td>
+          <td class="skip">SKIP</td>
+          <td>Deferred; hardware not available in current environment</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="card">
+      <h3>Known Issues &amp; Notes</h3>
+      <ul>
+        <li><strong>Test #11 (FAIL):</strong> When an invalid test path is provided, the error is caught internally but no user-facing message is surfaced in the GUI. Fix identified: add error dialog popup on subprocess failure.</li>
+        <li><strong>Test #12 (SKIP):</strong> Full hardware-in-the-loop integration testing requires physical CAN hardware. This test is scoped for a future iteration with the mini-HiL setup.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer>
+    HiL Test Automation Dashboard &mdash; Senior Project Delivery
+  </footer>
+
+</body>
+</html>
